@@ -134,6 +134,9 @@ namespace ServiceStack.OrmLite.Tests.UseCase
             //Use in-memory Sqlite DB instead
             //var dbFactory = new OrmLiteConnectionFactory(
             //    ":memory:", false, SqliteDialect.Provider);
+            
+            //If you are using this as a learning exercise, then use dbFactory.OpenDbConnection() with one
+            //   of the above dbFactory constructors rather than Confic.OpenDbConnection() below.
 
             //Non-intrusive: All extension methods hang off System.Data.* interfaces
             using (IDbConnection db = Config.OpenDbConnection())
